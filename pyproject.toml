@@ -4,6 +4,14 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
+
+
+authors=[
+    {name = "Manvendra Rajpoot", email="welzyalzy@gmail.com"}
+]
+
+license = {text = "AGPL-3.0-or-later"}
+
 dependencies = [
     "httpx>=0.28.1",
     "pydantic>=2.12.5",
@@ -26,6 +34,12 @@ where = ["src"]
 [build-system]
 requires = ["setuptools>=69", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = [
+    "build>=1.4.0",
+    "twine>=6.2.0",
+]
 
 [tool.pytest.ini_options]
 addopts = "--cov=namecheap_wrapper --cov-report=term-missing"
